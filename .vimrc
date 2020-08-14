@@ -1,5 +1,6 @@
 " Colors {{{
 syntax on
+filetype on
 colorscheme elflord
 " }}}
 " Tabs & Indentation {{{
@@ -43,10 +44,10 @@ au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g
 
 " Plugins {{{
 call plug#begin()
-
+Plug 'tomtom/tcomment_vim'
+Plug 'flazz/vim-colorschemes'
+Plug 'ycm-core/YouCompleteMe'
 " On-demand loading
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
-
 call plug#end()
 " }}}
-
